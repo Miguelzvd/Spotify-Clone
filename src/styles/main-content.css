@@ -95,14 +95,14 @@
 
 .playlist_section{
   width: 100%;
-  height: 78vh;
+  height: 70vh;
   background-color: #131313;
   border-radius: 0.5rem; /* 8px / 16px = 0.5rem */
 }
 
 .playlist_section-content{
   padding: 2rem; /* 32px / 16px = 2rem */
-  height: 92%;
+  height: 82%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem; /* 40px / 16px = 2.5rem */
@@ -125,15 +125,24 @@
   font-size: 1.875rem; /* 30px / 16px = 1.875rem */
 }
 
+.hidden {
+  display: none;
+}
+
+#result-playlists{
+  width: 100%;
+  height: 100%;
+}
+
 .playlist_section .playlist_section-content .cards{
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem; /* 64px / 16px = 4rem */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem; /* 64px / 16px = 4rem */
   justify-items: center;
-  overflow-y: hidden; 
-  overflow-y: scroll;
+  overflow: hidden;
+  overflow: scroll;
   -ms-overflow-style: none; /* Internet Explorer, Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -142,40 +151,41 @@
   display: none; /* Safari and Chrome */
 }
 
-.playlist_section .playlist_section-content .cards .card{
-  background-color: rgb(20, 131, 131);
-  width: 18.825rem; 
-  height: 18.825rem; 
-  border-radius: 1.5rem; 
-}
-
 
 .playlist_section .playlist_section-content .cards .card{
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* 16px / 16px = 1rem */
-  padding: 1.5rem; /* 24px / 16px = 1.5rem */
+  max-width: 11.825rem; 
+  max-height: 10.825rem; 
+  border-radius: 0.5rem; 
+  padding: 1rem; /* 24px / 16px = 1.5rem */
   font-family: var(--font-dm-sans);
-  font-size: 1.8rem;
-  font-weight: 800;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: #fff;
   overflow: hidden;
   position: relative;
+  background-color: #242424;
 }
 
-.playlist_section .playlist_section-content .cards .card p{
-  width: 15rem;
+.playlist_section .playlist_section-content .cards .card div{
+  height: 100%;
+  width: 100%;
 }
 
-.card_img-content{
-  position: absolute;
-  bottom: -1rem;
-  right: -1.8rem;
+.playlist_section .playlist_section-content .cards .card span{
+  width: 10rem;
+  display: block;
 }
+
 
 .playlist_section .playlist_section-content .cards .card img{
-  width: 10rem;
-  height: 10rem;
+  position: absolute;
+  bottom: -0.5rem;
+  right: -1rem;
+  width: 7rem;
+  height: 7rem;
   rotate: 25deg;
 }
 
@@ -239,3 +249,121 @@
 .playlist_section .playlist_section-content .cards .card:nth-child(15){
   background: rgb(60, 30, 80);
 }
+
+.playlist_section .playlist_section-content .cards .card:hover{
+  background-color: #252525;
+  cursor: pointer;
+}
+
+/* CARD ARTISTA */
+
+.artist {
+    --column-count: 5;
+    --grid-gap: 24px;
+    --min-container-width: 372px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .grid-container {
+    grid-gap:24px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    min-width: 767px;
+  }
+  
+  .artist-card {
+    background: #181818;
+    border-radius: 8px;
+    -ms-flex: 1;
+    flex: 1;
+    isolation: isolate;
+    padding: 16px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .artist-card:hover {
+    background-color: #252525;
+    cursor: pointer;
+  }
+  
+  .card-img {
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .artist-img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .card-text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-height: 62px;
+  }
+  
+  .card-text a {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  
+  .artist-name {
+    box-sizing: border-box;
+    margin-block: 0px;
+    font-size: 16px;
+    font-weight: 700;
+    padding-block-end: 8px;
+  }
+  
+  .artist-categorie {
+    color: #6a6a6a;
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+  
+  .play {
+    position: relative;
+  }
+  
+  .play .fa-play {
+    position: absolute;
+    right: 10px;
+    top: 120px;
+    padding: 18px;
+    background-color: #1db954;
+    border-radius: 100%;
+    font-size: 14px;
+    opacity: 0;
+    transition: all ease 0.4s;
+  }
+  
+  .artist-card:hover .play .fa-play {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  
+  .play .fa-play:hover {
+    padding: 20px;
+    cursor: pointer;
+  }
+  
+  #result-artist {
+    padding: 20px 40px;
+  }
+  /* FIM CARD ARTISTA */

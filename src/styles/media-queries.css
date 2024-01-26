@@ -1,0 +1,24 @@
+@media screen and (max-width: 1925px) {
+  .playlist_section .playlist_section-content .cards .card {
+    width: 16.825rem;
+    height: 16.825rem;
+  }
+}
+
+@media screen and (max-width: 1725px) {
+  .playlist_section .playlist_section-content .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1585px) {
+  .playlist_section .playlist_section-content .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1035px) {
+  .playlist_section .playlist_section-content .cards {
+    grid-template-columns: 1fr;
+  }
+}

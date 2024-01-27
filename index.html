@@ -85,7 +85,7 @@
 										alt="Seta esquerda"
 									/>
 								</button>
-								<button class="arrow-right">
+								<button disabled class="arrow-right">
 									<img
 										src="./src/assets/icons/small-right.png"
 										alt="Seta direita"
@@ -93,13 +93,15 @@
 								</button>
 							</div>
 
-							<div class="header_search">
+							<div class="header_search" id="search-area">
 								<img src="./src/assets/icons/search.png" alt="" />
 								<input
 									type="text"
 									id="search-input"
 									maxlength="800"
 									placeholder="O que você quer ouvir?"
+									autocomplete="off"
+                                    aria-selected="true"
 								/>
 							</div>
 
@@ -254,7 +256,7 @@
 				</div>
 			</div>
 		</main>
-		<footer>
+		<footer id="footer">
 			<div class="footer-text">
 				<p>TESTAR O PREMIUM DE GRAÇA</p>
 				<p>
@@ -262,9 +264,12 @@
 					anúncion. Não precisa de cartão de crédito.
 				</p>
 			</div>
+			
 			<button>
 				<span>Inscreva-se grátis</span>
 			</button>
+        
+			<img id="close-button" src="./src/assets/icons/x.png" alt="" class="x-mark"/>
 		</footer>
 		<script src="script.js" type="text/javascript"></script>
 	</body>

@@ -7,18 +7,39 @@
 
 @media screen and (max-width: 1725px) {
   .playlist_section .playlist_section-content .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media screen and (max-width: 1585px) {
   .playlist_section .playlist_section-content .cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (max-width: 1035px) {
+@media screen and (max-width: 1385px) {
+  .playlist_section .playlist_section-content .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 982px) {
+
+  .header_search {
+    width: 12.75rem;
+  }
+  
+}
+
+@media screen and (max-width: 890px) {
   .playlist_section .playlist_section-content .cards {
     grid-template-columns: 1fr;
   }
+  
 }
+
+@media screen and (max-width: 400px) {
+  
+  
+}
+
